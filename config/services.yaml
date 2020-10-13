@@ -27,5 +27,7 @@ services:
         resource: '../src/Controller/'
         tags: ['controller.service_arguments']
 
+    App\DataPersister\UserDataPersister:
+        decorates: 'api_platform.doctrine.orm.data_persister'
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
